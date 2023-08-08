@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(168, 166, 166);
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 1px 1px 10px black;
+}
+
+.nav-header {
+    margin-top: 10px;
+    margin-left: 100px;
+    max-width: 100%;
+    height: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-toggle {
+    display: none;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    margin-right: 100px;
+}
+
+@media screen and (max-width: 1030px) {
+    .nav-header {
+        margin-left: 20px;
+    }
+    .nav-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+    .social-icon i {
+        display: none;
+    }
+    .links{
+        display: none !important;
+    }
+}
+
+
+.nav-toggle:hover {
+    color: green;
+    transform: rotate(90deg);
+}
+.links li {
+    margin-left: 20px;
+}
+ul li a:hover{
+    color: rgb(14, 237, 59);
+    cursor: pointer;
+}
+a.active {
+    color: rgb(14, 237, 59);
+}
+ul li a.active{
+    color: rgb(14, 237, 59);
+}
+.social-icon i {
+    margin-left: 10px;
+    color: rgb(14, 237, 59);
+}
+
+.links.show-links {
+    display: flex;
+    flex-direction: column;
+}
+/* Additional CSS for showing links on toggle */
+.show-links {
+    display: block !important;
+    position: absolute;
+    top: 80px;
+    left: 0; /* Adjust this value to match the header height */
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
